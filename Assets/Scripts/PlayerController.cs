@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour {
     public Text ammoText;
     public GameObject[] weapons;
     public int score;
+    public Text scoreText;
+    public bool startedGenerator = false;
     public Dictionary<string, bool> keys = new Dictionary<string, bool>();
 
     private CharacterController _charCont;
@@ -57,7 +59,7 @@ public class PlayerController : MonoBehaviour {
             jump = Vector3.ClampMagnitude(jump, jumpheight);
             _charCont.Move(jump);
         }
-
+        scoreText.text = score.ToString();
       //  WeaponSwitch();
 
     }
@@ -71,7 +73,7 @@ public class PlayerController : MonoBehaviour {
         }
         else if (other.tag == "Energy") {
             other.gameObject.SetActive(false);
-            score += 1;
+            score++;
         }
         else if (other.tag == "Key") {
             print("GetKey: " + other.name);
@@ -80,18 +82,29 @@ public class PlayerController : MonoBehaviour {
             other.gameObject.SetActive(false);
             haveKey = true;
         }
-        else if(other.tag == "Door") {
+        else if (other.tag == "Door") {
             string doorIndex = other.name.Substring(5, other.name.Length - 5);
 
-           // print("door name " + doorIndex);
-           // print("have key for the door #" + doorIndex + " - " + keys[keyNameTemplate + doorIndex]);
+            // print("door name " + doorIndex);
+            // print("have key for the door #" + doorIndex + " - " + keys[keyNameTemplate + doorIndex]);
 
             if (keys[keyNameTemplate + doorIndex] == true) {
-               
+
                 other.gameObject.SetActive(false);
             }
         }
-        
-
+        else if (other.tag == "Battery_small") {
+            score += 3;
+            other.gameObject.SetActive(false);
+        }
+        else if (other.tag == "Battery_big") {
+            score += 5;
+            other.gameObject.SetActive(false);
+        }
+        else if (other.tag=="Generator") {
+            if (score >=40) {
+                startedGenerator = true;
+            }
+        }
     }
 }

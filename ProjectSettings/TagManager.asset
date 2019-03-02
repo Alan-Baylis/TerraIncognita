@@ -8,6 +8,9 @@ TagManager:
   - Energy
   - Key
   - Door
+  - Battery_small
+  - Battery_big
+  - Generator
   layers:
   - Default
   - TransparentFX

@@ -1,7 +1,7 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2017
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TerraIncognita", "TerraIncognita.csproj", "{417F5D83-F283-97B1-6BE3-BD79882C94EE}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{AA0D8B27-E64B-CA48-0F42-CB59661F0855}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,12 +9,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{417F5D83-F283-97B1-6BE3-BD79882C94EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{417F5D83-F283-97B1-6BE3-BD79882C94EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{417F5D83-F283-97B1-6BE3-BD79882C94EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{417F5D83-F283-97B1-6BE3-BD79882C94EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA0D8B27-E64B-CA48-0F42-CB59661F0855}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA0D8B27-E64B-CA48-0F42-CB59661F0855}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA0D8B27-E64B-CA48-0F42-CB59661F0855}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA0D8B27-E64B-CA48-0F42-CB59661F0855}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal

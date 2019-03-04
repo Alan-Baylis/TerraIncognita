@@ -13,10 +13,12 @@ public class PlayerController : MonoBehaviour {
     public static float playerHealth = 100;
     public static bool haveKey = false;
     public Text ammoText;
+    public Text healthText;
     public GameObject[] weapons;
     public int score;
     public Text scoreText;
-    public bool startedGenerator = false;
+    public static bool startedGenerator = false;
+    public GameObject generatorWork;
     public Dictionary<string, bool> keys = new Dictionary<string, bool>();
 
     private CharacterController _charCont;
@@ -41,26 +43,30 @@ public class PlayerController : MonoBehaviour {
 
 
     void Update() {
+        healthText.text = playerHealth.ToString();
+        if (playerHealth > 0) {
+            float deltaX = Input.GetAxis("Horizontal") * speed;
+            float deltaZ = Input.GetAxis("Vertical") * speed;
 
-        float deltaX = Input.GetAxis("Horizontal") * speed;
-        float deltaZ = Input.GetAxis("Vertical") * speed;
+            Vector3 movement = new Vector3(deltaX, 0, deltaZ);
+            movement = Vector3.ClampMagnitude(movement, speed);
 
-        Vector3 movement = new Vector3(deltaX, 0, deltaZ);
-        movement = Vector3.ClampMagnitude(movement, speed);
+            movement.y = gravity;
+            movement *= Time.deltaTime;
+            movement = transform.TransformDirection(movement);
 
-        movement.y = gravity;
-        movement *= Time.deltaTime;
-        movement = transform.TransformDirection(movement);
+            _charCont.Move(movement);
 
-        _charCont.Move(movement);
-        
-        if (Input.GetKeyDown(KeyCode.Space)) {
-            Vector3 jump = new Vector3(0, jumpheight, 0);
-            jump = Vector3.ClampMagnitude(jump, jumpheight);
-            _charCont.Move(jump);
+            if (Input.GetKeyDown(KeyCode.Space)) {
+                Vector3 jump = new Vector3(0, jumpheight, 0);
+                jump = Vector3.ClampMagnitude(jump, jumpheight);
+                _charCont.Move(jump);
+            }
+            scoreText.text = score.ToString();
+            //  WeaponSwitch();
         }
-        scoreText.text = score.ToString();
-      //  WeaponSwitch();
+        else print("You died");
+
 
     }
 
@@ -104,6 +110,7 @@ public class PlayerController : MonoBehaviour {
         else if (other.tag=="Generator") {
             if (score >=40) {
                 startedGenerator = true;
+                generatorWork.gameObject.SetActive(true);
             }
         }
     }

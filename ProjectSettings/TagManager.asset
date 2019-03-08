@@ -11,6 +11,8 @@ TagManager:
   - Battery_small
   - Battery_big
   - Generator
+  - Wrench
+  - Pliers
   layers:
   - Default
   - TransparentFX

@@ -11,7 +11,7 @@ public class DoorOpen : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (PlayerController.startedGenerator) {
+        if (PlayerController.generatorStarted) {
             this.gameObject.SetActive(false);
         }
 	}

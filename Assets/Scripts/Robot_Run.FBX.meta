@@ -1,0 +1,204 @@
+fileFormatVersion: 2
+guid: 1dd4add191a357842923d5d805ae5a12
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Robot_01
+    100002: Robot_01_part_00
+    100004: Robot_01_part_01
+    100006: Robot_01_part_02
+    100008: Robot_01_part_03
+    100010: Robot_01_part_04
+    100012: Robot_01_part_05
+    100014: Robot_01_part_06
+    100016: Robot_01_part_07
+    100018: Robot_01_part_08
+    100020: Robot_01_part_09
+    100022: Robot_01_part_10
+    100024: Robot_01_part_11
+    100026: Robot_01_part_12
+    100028: Robot_01_part_13
+    100030: Robot_01_part_14
+    100032: Robot_01_part_15
+    100034: Robot_01_part_16
+    100036: Robot_01_part_17
+    100038: Robot_01_part_18
+    100040: Robot_01_part_19
+    100042: Robot_01_part_20
+    100044: Robot_01_part_21
+    100046: Robot_01_part_22
+    100048: Robot_01_part_23
+    100050: Robot_01_part_24
+    100052: Robot_01_part_25
+    100054: Robot_01_part_26
+    100056: Robot_01_part_27
+    100058: Robot_01_part_28
+    100060: Robot_01_part_29
+    100062: Robot_01_part_30
+    100064: Robot_01_part_31
+    100066: Robot_01_part_32
+    100068: Robot_01_part_33
+    100070: Robot_01_part_34
+    100072: Robot_01_part_35
+    100074: Robot_01_part_36
+    100076: Robot_01_part_37
+    100078: Robot_01_part_38
+    100080: Robot_01_part_39
+    100082: Robot_01_part_40
+    100084: Robot_01_part_41
+    100086: Robot_01_part_42
+    100088: Robot_01_part_43
+    100090: Robot_01_part_44
+    100092: Robot_01_part_45
+    100094: Robot_01_part_46
+    100096: Robot_01_part_47
+    100098: Robot_01_part_48
+    100100: Robot_01_part_49
+    100102: Robot_01_part_50
+    100104: Robot_01_part_51
+    100106: //RootNode
+    400000: Robot_01
+    400002: Robot_01_part_00
+    400004: Robot_01_part_01
+    400006: Robot_01_part_02
+    400008: Robot_01_part_03
+    400010: Robot_01_part_04
+    400012: Robot_01_part_05
+    400014: Robot_01_part_06
+    400016: Robot_01_part_07
+    400018: Robot_01_part_08
+    400020: Robot_01_part_09
+    400022: Robot_01_part_10
+    400024: Robot_01_part_11
+    400026: Robot_01_part_12
+    400028: Robot_01_part_13
+    400030: Robot_01_part_14
+    400032: Robot_01_part_15
+    400034: Robot_01_part_16
+    400036: Robot_01_part_17
+    400038: Robot_01_part_18
+    400040: Robot_01_part_19
+    400042: Robot_01_part_20
+    400044: Robot_01_part_21
+    400046: Robot_01_part_22
+    400048: Robot_01_part_23
+    400050: Robot_01_part_24
+    400052: Robot_01_part_25
+    400054: Robot_01_part_26
+    400056: Robot_01_part_27
+    400058: Robot_01_part_28
+    400060: Robot_01_part_29
+    400062: Robot_01_part_30
+    400064: Robot_01_part_31
+    400066: Robot_01_part_32
+    400068: Robot_01_part_33
+    400070: Robot_01_part_34
+    400072: Robot_01_part_35
+    400074: Robot_01_part_36
+    400076: Robot_01_part_37
+    400078: Robot_01_part_38
+    400080: Robot_01_part_39
+    400082: Robot_01_part_40
+    400084: Robot_01_part_41
+    400086: Robot_01_part_42
+    400088: Robot_01_part_43
+    400090: Robot_01_part_44
+    400092: Robot_01_part_45
+    400094: Robot_01_part_46
+    400096: Robot_01_part_47
+    400098: Robot_01_part_48
+    400100: Robot_01_part_49
+    400102: Robot_01_part_50
+    400104: Robot_01_part_51
+    400106: //RootNode
+    2100000: Robot_Mat
+    4300000: Robot_01
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Robot_01
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

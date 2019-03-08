@@ -20,4 +20,10 @@ public class GameOver : MonoBehaviour {
         PlayerController.playerHealth = 100;
         SceneManager.LoadScene("Lvl1", LoadSceneMode.Single);
     }
+    public void StartLevel() {
+        SceneManager.LoadScene("Lvl1", LoadSceneMode.Single);
+    }
+    public void ExitGameBtn() {
+        Application.Quit();
+    }
 }

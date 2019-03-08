@@ -11,13 +11,14 @@ public class PlayerController : MonoBehaviour {
     public float gravity = -9.8f;
     public float jumpheight = 3.0f;
     public static float playerHealth = 100;
-    public static bool haveKey = false;
+    public static bool havePliers = false;
+    public static bool haveWrench = false;
     public Text ammoText;
     public Text healthText;
     public GameObject[] weapons;
     public int score;
     public Text scoreText;
-    public static bool startedGenerator = false;
+    public static bool generatorStarted = false;
     public GameObject generatorWork;
     public Dictionary<string, bool> keys = new Dictionary<string, bool>();
 
@@ -43,7 +44,10 @@ public class PlayerController : MonoBehaviour {
 
 
     void Update() {
-        healthText.text = playerHealth.ToString();
+        if (playerHealth >=0) {
+            healthText.text = playerHealth.ToString();
+        }
+        
         if (playerHealth > 0) {
             float deltaX = Input.GetAxis("Horizontal") * speed;
             float deltaZ = Input.GetAxis("Vertical") * speed;
@@ -72,6 +76,8 @@ public class PlayerController : MonoBehaviour {
 
 
     void OnTriggerEnter(Collider other) {
+        
+
         if (other.tag == "Wearpon") {
             other.gameObject.SetActive(false);
             weapons[0].SetActive(true);
@@ -82,11 +88,10 @@ public class PlayerController : MonoBehaviour {
             score++;
         }
         else if (other.tag == "Key") {
-            print("GetKey: " + other.name);
+            //print("GetKey: " + other.name);
             keys[other.name] = true;
 
             other.gameObject.SetActive(false);
-            haveKey = true;
         }
         else if (other.tag == "Door") {
             string doorIndex = other.name.Substring(5, other.name.Length - 5);
@@ -95,7 +100,6 @@ public class PlayerController : MonoBehaviour {
             // print("have key for the door #" + doorIndex + " - " + keys[keyNameTemplate + doorIndex]);
 
             if (keys[keyNameTemplate + doorIndex] == true) {
-
                 other.gameObject.SetActive(false);
             }
         }
@@ -107,11 +111,19 @@ public class PlayerController : MonoBehaviour {
             score += 5;
             other.gameObject.SetActive(false);
         }
-        else if (other.tag=="Generator") {
-            if (score >=40) {
-                startedGenerator = true;
+        else if (other.tag == "Generator") {
+            if (score >= 100) {
+                generatorStarted = true;
                 generatorWork.gameObject.SetActive(true);
             }
+        }
+        else if (other.tag == "Wrench") {
+            other.gameObject.SetActive(false);
+            haveWrench = true;
+        }
+        else if (other.tag == "Pliers") {
+            other.gameObject.SetActive(false);
+            havePliers = true;
         }
     }
 }

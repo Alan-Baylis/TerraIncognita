@@ -17,11 +17,11 @@ public class Patrol : MonoBehaviour {
     void Update() {
         if (agent.transform.position.x == pointA.position.x && agent.transform.position.z == pointA.position.z) {
             agent.SetDestination(pointB.position);
-            print("A");
+           // print("A");
         }
         if (agent.transform.position.x == pointB.position.x && agent.transform.position.z == pointB.position.z) {
             agent.SetDestination(pointA.position);
-            print("b");
+            //print("b");
         }
     }
     private void OnTriggerEnter(Collider other) {

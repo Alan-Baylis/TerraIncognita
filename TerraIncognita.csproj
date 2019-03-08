@@ -314,11 +314,12 @@
     <Compile Include="Assets\Scripts\DoorOpen.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\GameOver.cs" />
-    <Compile Include="Assets\Scripts\KeyPick.cs" />
     <Compile Include="Assets\Scripts\LevelComplete.cs" />
     <Compile Include="Assets\Scripts\Patrol.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\PliersPick.cs" />
     <Compile Include="Assets\Scripts\WearponController.cs" />
+    <Compile Include="Assets\Scripts\WrenchPick.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Sci-Fi Styled Modular Pack\Readme.txt" />

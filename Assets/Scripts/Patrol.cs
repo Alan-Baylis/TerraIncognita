@@ -24,9 +24,5 @@ public class Patrol : MonoBehaviour {
             //print("b");
         }
     }
-    private void OnTriggerEnter(Collider other) {
-        if (other.tag == "Player") {
-            PlayerController.playerHealth -= 10;
-        }
-    }
+    
 }

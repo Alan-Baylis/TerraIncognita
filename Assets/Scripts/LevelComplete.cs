@@ -5,11 +5,11 @@ using UnityEngine.SceneManagement;
 
 
 public class LevelComplete : MonoBehaviour {
-   // public GameObject lvlComplete;
+    public GameObject lvlComplete;
    // public Text lvlComplete;
    // Use this for initialization
     void Start () {
-		
+        lvlComplete.gameObject.SetActive(false);
 	}
 	
 	// Update is called once per frame
@@ -25,8 +25,8 @@ public class LevelComplete : MonoBehaviour {
     }//
     IEnumerator LevelCompleted() {
         yield return new WaitForSeconds(1.0f);
-       // lvlComplete.SetActive(true);
-        yield return new WaitForSeconds(2.0f);
-        SceneManager.LoadScene("Start");
+        lvlComplete.SetActive(true);
+       // yield return new WaitForSeconds(2.0f);
+        //SceneManager.LoadScene("Start");
     }
 }

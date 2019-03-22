@@ -317,8 +317,11 @@
     <Compile Include="Assets\Scripts\LevelComplete.cs" />
     <Compile Include="Assets\Scripts\Patrol.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Pliers.cs" />
     <Compile Include="Assets\Scripts\PliersPick.cs" />
+    <Compile Include="Assets\Scripts\Trap.cs" />
     <Compile Include="Assets\Scripts\WearponController.cs" />
+    <Compile Include="Assets\Scripts\Wire.cs" />
     <Compile Include="Assets\Scripts\WrenchPick.cs" />
   </ItemGroup>
   <ItemGroup>

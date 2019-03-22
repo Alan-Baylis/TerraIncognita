@@ -6,7 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class LevelComplete : MonoBehaviour {
     public GameObject lvlComplete;
-   // public Text lvlComplete;
+    public GameObject generatorWork;
+    // public Text lvlComplete;
+    public static bool lvlCompleted = false;
    // Use this for initialization
     void Start () {
         lvlComplete.gameObject.SetActive(false);
@@ -18,12 +20,14 @@ public class LevelComplete : MonoBehaviour {
 	}
     private void OnTriggerEnter(Collider other) {
        
-       if (other.tag == "Player"&&PlayerController.haveWrench && PlayerController.havePliers && PlayerController.generatorStarted) {
+       if (other.tag == "Player"&&PlayerController.haveWrench && PlayerController.havePliers && PlayerController.generatorStarted&&PlayerController.wrenchInHand) {
             //  lvlComplete.text = "Level complete!!";
+            lvlCompleted = true;
             StartCoroutine("LevelCompleted");
         }
     }//
     IEnumerator LevelCompleted() {
+        generatorWork.gameObject.SetActive(true);
         yield return new WaitForSeconds(1.0f);
         lvlComplete.SetActive(true);
        // yield return new WaitForSeconds(2.0f);

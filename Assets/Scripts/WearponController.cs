@@ -32,37 +32,40 @@ public class WearponController : MonoBehaviour {
     }
 
     void Update() {
-        if (reloading)
-            return;
-        if (currentAmmo <= 0) {
-            StartCoroutine(Reload());
-            return;
-        }
-        if (Input.GetButton("Fire1") && Time.time >= nextFire) {
-            muzzleFlash.Play();
-            nextFire = Time.time + 1.0f / fireRate;
-            Fire();
-            currentAmmo -= 1;
-        }
-        if (Input.GetButtonUp("Fire1")) {
-            weponAnim.SetBool("IsShooting", false);
-        }
+        if (PlayerController.playerHealth > 0) {
+            if (reloading)
+                return;
+            if (currentAmmo <= 0) {
+                StartCoroutine(Reload());
+                return;
+            }
+            if (Input.GetButton("Fire1") && Time.time >= nextFire) {
+                muzzleFlash.Play();
+                nextFire = Time.time + 1.0f / fireRate;
+                Fire();
+                currentAmmo -= 1;
+            }
+            if (Input.GetButtonUp("Fire1")) {
+                weponAnim.SetBool("IsShooting", false);
+            }
 
-        ammoText.text = currentAmmo.ToString() + "/" + maxAmmo.ToString();
+            ammoText.text = currentAmmo.ToString() + "/" + maxAmmo.ToString();
+        }
     }
+        IEnumerator Reload() {
+            reloading = true;
+            weponAnim.SetBool("Reloading", true);
+            yield return new WaitForSeconds(reloadTime - 0.25f);
+            weponAnim.SetBool("Reloading", false);
+            yield return new WaitForSeconds(0.25f);
+            currentAmmo = maxAmmo;
+            reloading = false;
 
-    IEnumerator Reload() {
-        reloading = true;
-        weponAnim.SetBool("Reloading", true);
-        yield return new WaitForSeconds(reloadTime - 0.25f);
-        weponAnim.SetBool("Reloading", false);
-        yield return new WaitForSeconds(0.25f);
-        currentAmmo = maxAmmo;
-        reloading = false;
+            audioPlayer.PlayOneShot(reloadSound, 1.0f);
 
-        audioPlayer.PlayOneShot(reloadSound, 1.0f);
+        }
 
-    }
+    
 
     void Fire() {
         muzzleFlash.Play();

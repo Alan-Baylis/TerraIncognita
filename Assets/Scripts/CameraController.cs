@@ -34,5 +34,6 @@ public class CameraController : MonoBehaviour {
 
             transform.localEulerAngles = new Vector3(_rotationX, _rotationY, 0);
         }
+
     }
-    }
+}
